@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yanissskuiz goatttt</title>
+    <meta name="description" content="Découvre ton niveau de fanitude de Yanissska !">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles" id="particles-js"></div>
+    
+    <div class="container">
+        <div id="home-screen" class="screen active">
+            <header>
+                <h1 class="title-glitch">YANISSSKUIZ<span class="glitch">_</span></h1>
+                <p class="subtitle">Teste ton niveau de fanitude de yanissska le goat</p>
+            </header>
+            
+            <div class="card glass">
+                <div class="card-content">
+                    <p>27 questions pour évaluer ta connaissance de Yanissska, son contenu, sa personne et bien d'autres.</p>
+                    <div class="btn-group">
+                        <button id="start-btn" class="btn btn-primary pulse">ON Y VA</button>
+                        <button id="leaderboard-btn" class="btn btn-secondary">CLASSEMENT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="card glass">
+                <div class="quiz-header">
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <div class="question-counter" id="question-counter"></div>
+                </div>
+                
+                <div class="question" id="question-text"></div>
+                
+                <div class="answers">
+                    <button class="answer-btn btn btn-yes" id="yes-btn">
+                        OUI
+                    </button>
+                    <button class="answer-btn btn btn-no" id="no-btn">
+                        NON
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <div class="card glass">
+                <div class="result-header">
+                    <h2>TON RÉSULTAT</h2>
+                    <canvas id="share-canvas" style="display:none;"></canvas>
+                </div>
+                
+                <div class="score-display">
+                    <div class="score-percent" id="final-score">0%</div>
+                    <div class="badge" id="badge-text"></div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="results-chart"></canvas>
+                </div>
+                
+                <div class="categories" id="categories-container"></div>
+                
+                <div class="save-container">
+                    <input type="text" id="username-input" placeholder="Pseudo (optionnel)" maxlength="20">
+                    <div class="btn-group">
+                        <button id="save-btn" class="btn btn-primary">ENREGISTRER</button>
+                        <button id="share-btn" class="btn btn-secondary">PARTAGER</button>
+                        <button id="home-from-results-btn" class="btn btn-tertiary">ACCUEIL</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="leaderboard-screen" class="screen">
+            <div class="card glass">
+                <div class="leaderboard-header">
+                    <h2>TOP FANS</h2>
+                    <button id="home-from-leaderboard-btn" class="btn btn-icon">
+                        <span>×</span>
+                    </button>
+                </div>
+                
+                <div class="table-container">
+                    <table id="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>PSEUDO</th>
+                                <th>SCORE</th>
+                                <th>DATE</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/share-card.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
